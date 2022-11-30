@@ -1,35 +1,37 @@
 /* FONTS  */
 @font-face {
-     font-family: 'Poppins';
+     font-family: 'Rubik';
      src: url('../fonts/') format('woff2'),
-          url('../fonts/Poppins-SemiBold.woff') format('woff');
-     font-weight: 600;
+          url('../fonts/Rubik-Medium.woff') format('woff');
+     font-weight: 500;
      font-style: normal;
      font-display: swap;
 }
 
 @font-face {
-     font-family: 'Poppins';
-     src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
-          url('../fonts/Poppins-Bold.woff') format('woff');
-     font-weight: bold;
-     font-style: normal;
-     font-display: swap;
-}
-
-@font-face {
-     font-family: 'Poppins';
-     src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
-          url('../fonts/Poppins-Regular.woff') format('woff');
+     font-family: 'Rubik';
+     src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
+          url('../fonts/Rubik-Regular.woff') format('woff');
      font-weight: normal;
      font-style: normal;
      font-display: swap;
 }
 
+@font-face {
+     font-family: 'Rubik';
+     src: url('../fonts/Rubik-MediumItalic.woff2') format('woff2'),
+          url('../fonts/Rubik-MediumItalic.woff') format('woff');
+     font-weight: 500;
+     font-style: italic;
+     font-display: swap;
+}
+
+
+
 
 /* CUSTOM PROPS  */
 :root {
-     --font-family: 'Poppins', sans-serif;
+     --font-family: 'Rubik', sans-serif;
      --blue: #5267df;
      --red: #fa5959;
      --text-color: #242a45;
@@ -59,7 +61,7 @@ body {
      flex-direction: column;
      background-color: #fff;
      color: var(--text-color-50);
-     font-family: "Arial" sans-serif;
+     font-family: 'Rubik', sans-serif;
      font-size: 16px;
      line-height: 36px;
      letter-spacing: 0.15px;
@@ -109,9 +111,9 @@ select:-webkit-autofill:focus {
 
 .container {
      width: 100%;
-     max-width: 1170px;
-     padding-left: 30px;
-     padding-right: 30px;
+     max-width: 1150px;
+     padding-left: 20px;
+     padding-right: 20px;
      margin-left: auto;
      margin-right: auto;
 }
@@ -119,6 +121,119 @@ select:-webkit-autofill:focus {
 .main-content {
      flex-grow: 1;
 }
+
+/* BUTTON  */
+.button {
+     display: inline-block;
+     text-decoration: none;
+     padding: 8px 22px;
+     border: 2px solid transparent;
+     border-radius: 5px;
+     font-size: 14px;
+     line-height: 28px;
+     font-weight: 500;
+     cursor: pointer;
+     white-space: no-wrap;
+}
+
+.button:active {
+     opacity: 0.6;
+}
+
+.button--red {
+     padding: 12px 32px;
+     background-color: var(--red);
+     color: #fff;
+}
+
+.button--red:hover {
+     border-color: var(--red);
+     background-color: #fff;
+     color: var(--red);
+}
+
+/* LOGO  */
+.logo {
+     display: block;
+     text-decoration: none;
+}
+
+.logo:hover {
+     opacity: 0.8;
+}
+
+.logo:active {
+     opacity: 0.6;
+}
+
+.logo__img {
+     display: block;
+     width: 149px;
+     height: 25px;
+     object-fit: contain;
+}
+
+/* SITENAV  */
+.sitenav {
+     font-size: 13px;
+     line-height: 17px;
+     letter-spacing: 1.5px;
+     text-transform: uppercase;
+
+
+}
+
+
+.sitenav__list {
+     display: flex;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+}
+
+.sitenav__item:not(:last-child) {
+     margin-right: 48px;
+}
+
+.sitenav__link {
+     display: block;
+     text-decoration: none;
+     font-family: var(--font-family);
+     color: var(--text-color);
+}
+
+.sitenav__link:hover {
+     color: var(--red);
+}
+
+.sitenav__link:active {
+     opacity: 0.6;
+}
+
+/* SITE-HEADER  */
+
+.site-header {
+     padding: 48px 48px;
+     text-transform: uppercase;
+}
+
+.site-header__container {
+     display: flex;
+     align-items: center;
+}
+
+.site-header__logo {
+     margin-right: auto;
+}
+
+
+.site-header__sitenav {
+     margin-right: 48px;
+}
+
+
+
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min--moz-device-pixel-ratio: 2),
