@@ -183,7 +183,7 @@ select:-webkit-autofill:focus {
 
 .button--block {
      display: block;
-     width: 100%;
+     max-width: 100%;
 }
 
 .button--block:hover {}
