@@ -56,6 +56,7 @@ html {
 body {
      display: flex;
      height: 100%;
+     overflow-x: hidden;
      padding: 0;
      margin: 0;
      flex-direction: column;
@@ -186,7 +187,6 @@ select:-webkit-autofill:focus {
      max-width: 100%;
 }
 
-.button--block:hover {}
 
 /* LOGO  */
 .logo {
@@ -246,6 +246,38 @@ select:-webkit-autofill:focus {
      opacity: 0.6;
 }
 
+/* SECTION  */
+.section {
+     padding-top: 75px;
+     padding-bottom: 75px;
+}
+
+.container {}
+
+.section__info {
+     width: 100%;
+     max-width: 540px;
+     text-align: center;
+     margin-right: auto;
+     margin-left: auto;
+     margin-bottom: 48px;
+}
+
+.section__title {
+     margin-top: 0;
+     margin-bottom: 16px;
+     font-size: 32px;
+     line-height: 52px;
+     font-weight: 500;
+     color: var(--text-color);
+}
+
+.section__descrption {
+     margin: 0;
+     font-size: 18px;
+     line-height: 28px;
+}
+
 /* SITE-HEADER  */
 
 .site-header {
@@ -266,6 +298,65 @@ select:-webkit-autofill:focus {
 .site-header__sitenav {
      margin-right: 48px;
 }
+
+/* HERO-CONTENT */
+
+.hero {
+     padding-top: 66px;
+     padding-bottom: 105px;
+     background-image: url(../img/blue-pill-bg.svg);
+     background-repeat: no-repeat;
+     background-position: calc(50% + 705px) 200px;
+}
+
+.hero-container {
+     display: flex;
+     align-items: flex-start;
+}
+
+.hero__content {
+     flex-shrink: 0;
+     width: 100%;
+     max-width: 540px;
+     padding-top: 66px;
+     margin-right: 65px;
+
+}
+
+.hero__title {
+     margin-top: 0;
+     margin-bottom: 24px;
+     font-size: 48px;
+     line-height: 52px;
+     font-weight: 500;
+     color: var(--text-color);
+}
+
+.hero__descrption {
+     margin-top: 0;
+     margin-bottom: 32px;
+     font-size: 18px;
+     line-height: 28px;
+}
+
+.hero__actions {
+     display: flex;
+}
+
+.hero__actions-item:not(:last-child) {
+     margin-right: 16px;
+}
+
+.hero__img {
+     flex-shrink: 0;
+     width: 578px;
+     height: 385px;
+     object-fit: contain;
+     overflow: hidden;
+     filter: drop-shadow (0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+
 
 
 
