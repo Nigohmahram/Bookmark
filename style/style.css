@@ -129,6 +129,7 @@ select:-webkit-autofill:focus {
      padding: 8px 22px;
      border: 2px solid transparent;
      border-radius: 5px;
+     text-align: center;
      font-size: 14px;
      line-height: 28px;
      font-weight: 500;
@@ -140,8 +141,14 @@ select:-webkit-autofill:focus {
      opacity: 0.6;
 }
 
+.button--site-header {
+     padding: 10px 31px;
+     font-size: 13px;
+     line-height: 17px;
+     letter-spacing: 1.5px;
+}
+
 .button--red {
-     padding: 12px 32px;
      background-color: var(--red);
      color: #fff;
 }
@@ -151,6 +158,35 @@ select:-webkit-autofill:focus {
      background-color: #fff;
      color: var(--red);
 }
+
+.button--blue {
+     background-color: var(--blue);
+     color: #fff;
+}
+
+.button--blue:hover {
+     border-color: var(--blue);
+     background-color: #fff;
+     color: var(--blue);
+}
+
+.button--grey {
+     background-color: #f7f7f7;
+     color: var(--text-color);
+}
+
+.button--grey:hover {
+     border-color: #5b6074;
+     background-color: #fff;
+     color: var(--text-color);
+}
+
+.button--block {
+     display: block;
+     width: 100%;
+}
+
+.button--block:hover {}
 
 /* LOGO  */
 .logo {
