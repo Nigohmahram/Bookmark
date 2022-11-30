@@ -27,9 +27,14 @@
 }
 
 
-/* ROOT  */
+/* CUSTOM PROPS  */
 :root {
      --font-family: 'Poppins', sans-serif;
+     --blue: #5267df;
+     --red: #fa5959;
+     --text-color: #242a45;
+     --text-color-75: rgb(36, 42, 69, 0.75);
+     --text-color-50: rgb(36, 42, 69, 0.5);
 }
 
 /* GLOBALL */
@@ -53,7 +58,7 @@ body {
      margin: 0;
      flex-direction: column;
      background-color: #fff;
-     color: #222;
+     color: var(--text-color-50);
      font-family: "Arial" sans-serif;
      font-size: 16px;
      line-height: 36px;
