@@ -1,0 +1,357 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-bottom: 20px;
+    overscroll-behavior-y: none;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.imageOverflowStyle {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.extensionList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* The z-index of DownloadEdgeBanner and header are related. DownloadEdgeBanner should be higher than header but not as high as feedback popup*/
+.Banner {
+    align-items: center;
+    display: inline-flex;
+    margin: 0 auto;
+    padding: 8px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.BannerRedesigned {
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.shimmer {
+    display: block;
+    background-color: #e5e5e5;
+    animation: blink 1.6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+}
+
+.disable-background-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.enable-scroll {
+    position: static;
+    overflow-y: auto;
+}
+
+.nav-pane-fixed {
+    position: fixed;
+}
+
+.nav-pane-abs-when-not-fixed:not(.nav-pane-fixed) {
+    position: absolute;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@media (-ms-high-contrast: active) {
+    svg rect {
+        stroke: WindowText;
+    }
+
+    svg path {
+        fill: WindowText;
+    }
+
+    .Banner {
+        border: 1px solid;
+    }
+
+    .BannerRedesigned {
+        border: 1px solid;
+    }
+
+    .error_hc {
+        fill: HighlightText;
+    }
+
+    div[role="treeitem"]:hover svg rect,
+    div[role="treeitem"][aria-selected="true"] svg rect {
+        stroke: HighlightText;
+    }
+
+    div[role="treeitem"]:hover svg path,
+    div[role="treeitem"][aria-selected="true"] svg path {
+        fill: HighlightText;
+    }
+
+    button[direction="next"]:hover svg path,
+    button[direction="previous"]:hover svg path {
+        fill: HighlightText;
+    }
+}
+
+/*-------------------------------------------- CSS for UHF component----------------------------------------------*/
+
+/* Keeping position fixed because our header is fixed */
+#meControlDropdown {
+    position: fixed !important;
+    top: 58px !important;
+    right: 8% !important;
+    left: unset !important;
+}
+
+.c-uhfh-actions .c-search {
+    display: none !important;
+}
+
+.c-uhfh-actions #uhf-shopping-cart {
+    display: none !important;
+}
+
+#uhf-g-nav .js-paddle-items #c-shellmenu_42 {
+    display: none;
+}
+
+#uhf-g-nav {
+    overflow-x: hidden !important;
+}
+
+/* For screen width more than 1035px size */
+@media only screen and (min-width: 1035px) {
+    /* For fixing acc bug: https://microsoft.visualstudio.com/Edge/_workitems/edit/31864320/ */
+    .js-paddle-items li.uhf-menu-item:nth-child(-n + 7) {
+        display: none;
+    }
+
+    #UhfHome {
+        display: none;
+    }
+
+    #UhfEditorPicks {
+        display: none;
+    }
+
+    #UhfTrending {
+        display: none;
+    }
+
+    #UhfGetStarted {
+        display: none;
+    }
+
+    #UhfThemes {
+        display: none;
+    }
+
+    #Categories {
+        display: none;
+    }
+
+    #uhf-g-nav .js-paddle-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #uhf-g-nav .js-paddle-items {
+        float: unset;
+    }
+
+    #headerArea {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px 0px;
+    }
+}
+
+/* For screen width less than 1035px size */
+@media only screen and (max-width: 1035px) and (min-width: 860px) {
+    #uhf-g-nav .js-paddle-items {
+        float: right;
+    }
+
+    #uhf-g-nav .js-paddle-items[dir="rtl"] {
+        float: left;
+    }
+
+    #uhf-g-nav .js-paddle-items > .uhf-menu-item:not(#overflow-menu) a {
+        display: none;
+    }
+
+    #uhf-g-nav .js-paddle-items > .uhf-menu-item:not(#overflow-menu) button {
+        display: none;
+    }
+
+    #headerArea {
+        top: 0;
+        z-index: 1000;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px 0px;
+    }
+
+    .BannerRedesigned {
+        position: unset;
+    }
+}
+
+/* For screen width less than 859px size */
+@media only screen and (max-width: 859px) {
+    #UhfHome {
+        display: none;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* For screen width more than 1035px size */
+@media only screen and (min-width: 1035px) {
+    #newHomeSearchBox {
+        margin-top: 0px;
+    }
+
+    #newHomeSearchResults {
+        margin-top: 0px;
+    }
+
+    #headingWithCount {
+        margin-top: 4px;
+    }
+}
+
+/* For screen width less than 1035px size, left aligning search box */
+@media only screen and (max-width: 1035px) {
+    #newHomeSearchBox {
+        margin-top: 0px;
+        margin-inline-start: 14px;
+        width: 300px;
+    }
+
+    #newHomeSearchResults {
+        margin-top: 0px;
+        margin-inline-start: 14px;
+        width: 300px;
+    }
+
+    #headingWithCount {
+        margin-top: 0px;
+    }
+}
+
+/* For screen width less than 708px size, making search box full width */
+@media only screen and (max-width: 708px) {
+    #newHomeSearchBox {
+        margin-top: 0px;
+        margin-inline-start: 14px;
+        min-width: 480px;
+    }
+
+    #newHomeSearchResults {
+        margin-top: 0px;
+        margin-inline-start: 14px;
+        min-width: 103%;
+    }
+}
+
+/* For screen width less than 542px size, making search box full width */
+@media only screen and (max-width: 542px) {
+    #newHomeSearchBox {
+        margin-top: 0px;
+        margin-inline-start: 14px;
+        min-width: 280px;
+        max-width: 280px;
+    }
+}
+
+#defaultSearchBox {
+    margin-top: 24px;
+}
+
+#aria-live-div-id {
+    position: absolute;
+    left: 0px;
+    height: 1px;
+    width: 0px;
+    overflow: hidden;
+}
+
+.base-card-title {
+    cursor: pointer;
+}
+.regular-media {
+    margin: 0 auto;
+}
+.regular-media .media-video {
+    max-width: 400px;
+    max-height: 250px;
+    display: flex;
+}
+
+.dialog-media .media-image {
+    max-height: 65vh;
+    height: auto !important;
+    width: auto !important;
+    object-fit: contain;
+}
+
+.incompatible {
+    cursor: "hands";
+    text-decoration: none;
+}
+.incompatible:hover {
+    position: relative;
+}
+.incompatible span {
+    display: none;
+}
+.incompatible:hover span {
+    padding: 4px 8px;
+    display: block;
+    z-index: 100;
+    background: #3b3b3b;
+    right: -48px;
+    margin: 15px;
+    width: 190px;
+    height: fit-content;
+    position: absolute;
+    top: 12px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+}

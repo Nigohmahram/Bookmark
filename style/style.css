@@ -451,6 +451,16 @@ select:-webkit-autofill:focus {
      overflow: hidden;
      filter: drop-shadow (0px 2px 4px rgba(0, 0, 0, 0.5));
 }
+.button{
+     padding: 4px 12px;
+     border: 1px solid #000;
+     border-radius: 5px;
+}
+.button-liked{
+     border-color: transparent;
+     background-color: tomato;
+     color: #fff;
+}
 
 
 /* FEATURES  */
