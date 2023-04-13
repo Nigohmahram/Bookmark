@@ -237,6 +237,9 @@ select:-webkit-autofill:focus {
      font-family: var(--font-family);
      color: var(--text-color);
 }
+.sitenav--white .sitenav__link {
+     color: white;
+}
 
 .sitenav__link:hover {
      color: var(--red);
@@ -630,6 +633,29 @@ select:-webkit-autofill:focus {
 .accordion__item-text {
      margin: 0;
 }
+/* SOCIALS */
+.socials {
+     display: flex;
+     align-items: center;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+}
+.socials__item:not(:last-child) {
+     margin-right: 40px;
+}
+.socials__link {
+     display: flex;
+     color: #fff;
+     transition: 0.5s ease-in-out;
+}
+.socials__link:hover{
+     color: var(--red);
+}
+.socials__link:active{
+     opacity: 0.6;
+}
+
 
 /* SCRIPTION */
 .scription {
@@ -709,6 +735,24 @@ select:-webkit-autofill:focus {
 .scription__field:placeholder-shown + .scription__error {
      display: none;
 }
+
+/* FOOTER */
+.site-footer {
+     padding: 32px 0;
+     background-color: var(--text-color);
+     color: #fff;
+}
+.site-footer__container {
+     display: flex;
+     align-items: center;
+}
+.site-footer__logo {
+     margin-right: 63px;
+}
+.site-footer__sitenav {
+     margin-right: auto;
+}
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min--moz-device-pixel-ratio: 2),
