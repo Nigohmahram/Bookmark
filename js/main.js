@@ -1,4 +1,5 @@
-
+const modifiers = {
+};
 
 
 const elsTabsItem = document.querySelectorAll('.tabs__item'),
